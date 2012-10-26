@@ -3,10 +3,3 @@
 .coverage
 .DS_Store
 .idea
-.data
-.data_test
-*.egg-info
-database/rebuild_all
-build/
-dist/
-wsgi/python-eggs/*.egg-tmp

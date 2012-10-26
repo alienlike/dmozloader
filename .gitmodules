@@ -1,0 +1,3 @@
+[submodule "dmozparser"]
+	path = dmozparser
+	url = https://github.com/alienlike/dmoz-parser.git

@@ -9,8 +9,10 @@ class DMOZEntry(DeclarativeBase):
     url = Column(String)
     title = Column(String)
     description = Column(String)
+    topic = Column(String)
 
     def __init__(self, page, content):
         self.url = page
         self.title = content.get(u'd:Title', u'')
         self.description = content.get(u'd:Description', u'')
+        self.topic = content.get(u'topic', u'')

@@ -1,4 +1,4 @@
-from dmoz_entry import DMOZEntry
+from models.dmoz_entry import DMOZEntry
 
 class AlchemyHandler:
 

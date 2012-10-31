@@ -1,10 +1,8 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from dmozparser.parser import DmozParser
-from alchemyimport.alchemy_handler import AlchemyHandler
-
-DMOZ_FILE = '../dmoz/content.rdf.u8'
-CONN_STR = 'postgresql://localhost:5432/webstadex'
+from handlers.alchemy_handler import AlchemyHandler
+from settings import CONN_STR, DMOZ_FILE
 
 if __name__ == '__main__':
 

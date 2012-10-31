@@ -1,6 +1,5 @@
 from dmozparser.parser import DmozParser
-
-DMOZ_FILE = '../dmoz/content.rdf.u8'
+from settings import DMOZ_FILE
 
 class DummyHandler:
     def page(self, page, content): pass

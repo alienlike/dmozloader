@@ -5,7 +5,8 @@ from settings import CONN_STR
 if __name__ == '__main__':
 
     # build tables
-    from handlers.alchemy_handler import AlchemyHandler
+    from models.dmoz_page import DmozPage
+    from models.dmoz_topic import DmozTopic
     engine = create_engine(CONN_STR)
     DeclarativeBase.metadata.bind = engine
     DeclarativeBase.metadata.drop_all()

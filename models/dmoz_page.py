@@ -1,9 +1,9 @@
 from sqlalchemy import Column, Integer, String
 from . import DeclarativeBase
 
-class DMOZEntry(DeclarativeBase):
+class DmozPage(DeclarativeBase):
 
-    __tablename__ = 'dmoz_entry'
+    __tablename__ = 'dmoz_page'
 
     id = Column(Integer, primary_key=True, nullable=False)
     url = Column(String)

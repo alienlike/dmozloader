@@ -1,6 +1,6 @@
-from models.dmoz_entry import DMOZEntry
+from models.dmoz_page import DmozPage
 
-class AlchemyHandler:
+class PageHandler:
 
     def __init__(self, session):
         self.session = session
@@ -8,7 +8,7 @@ class AlchemyHandler:
 
     def page(self, page, content):
 
-        entry = DMOZEntry(page, content)
+        entry = DmozPage(page, content)
         self.session.add(entry)
         self.ct += 1
 

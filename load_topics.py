@@ -1,8 +1,8 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from dmozparser.parser import DmozParser
-from handlers.alchemy_handler import AlchemyHandler
-from settings import CONN_STR, DMOZ_FILE
+from dmozparser.structure_parser import DmozStructureParser
+from handlers.topic_handler import TopicHandler
+from settings import CONN_STR, DMOZ_STRUCTURE_FILE
 
 if __name__ == '__main__':
 
@@ -14,8 +14,8 @@ if __name__ == '__main__':
     session = Session()
 
     # configure parser
-    parser = DmozParser(DMOZ_FILE)
-    parser.add_handler(AlchemyHandler(session))
+    parser = DmozStructureParser(DMOZ_STRUCTURE_FILE)
+    parser.add_handler(TopicHandler(session))
 
     # run
     parser.run()
